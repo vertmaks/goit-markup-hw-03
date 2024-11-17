@@ -1,3 +1,8 @@
+/* #region Base */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 150%;
@@ -6,13 +11,46 @@ body {
   background-color: #fff;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
+  color: currentColor;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+/* #endregion */
+
+/* #region Common */
+section {
+  padding: 120px 0;
 }
 
 .section-title {
@@ -22,6 +60,7 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 72px;
 }
 
 .subtitle {
@@ -32,7 +71,27 @@ a {
   letter-spacing: 0.02em;
 }
 
-/* #region Logo settings */
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* #endregion */
+
+/* #region Logo */
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -53,7 +112,36 @@ a {
 /* #endregion */
 
 /* #region Header */
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  margin-right: 76px;
+  padding: 24px 0;
+}
+
+.header-nav {
+  font-weight: 500;
+  font-size: 16px;
+  color: #2e2f42;
+  padding: 24px 0;
+}
+
 .address {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
   font-style: normal;
 }
 
@@ -61,12 +149,12 @@ a {
 .header-address {
   list-style-type: none;
   text-decoration: none;
+  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-nav {
-  font-weight: 500;
-  font-size: 16px;
-  color: #2e2f42;
+.header-address-list {
+  display: flex;
+  gap: 40px;
 }
 
 .header-address {
@@ -74,6 +162,7 @@ a {
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-nav:hover,
@@ -83,20 +172,28 @@ a {
   color: #404bbf;
 }
 
+.header-nav-list {
+  display: inline-flex;
+  gap: 40px;
+  margin: 0;
+}
 /* #endregion */
 
 /* #region Hero section */
 .hero-section {
+  padding: 188px 0;
   background-color: #2e2f42;
 }
 
 .hero-title {
+  max-width: 496px;
   font-weight: 700;
   font-size: 56px;
   line-height: 107%;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  margin: 0 auto 48px;
 }
 
 .order-button {
@@ -104,9 +201,17 @@ a {
   font-weight: 500;
   line-height: 150%;
   letter-spacing: 0.04em;
+  min-width: 169px;
+  display: block;
   color: #fff;
   background-color: #4d5ae5;
   cursor: pointer;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-button:hover,
@@ -118,6 +223,19 @@ a {
 /* #region Benefits section */
 .benefits-subtitle {
   letter-spacing: 0.02em;
+}
+
+.benefits-list {
+  display: flex;
+  gap: 24px;
+}
+
+.benefits-subtitle {
+  margin: 0;
+  margin-bottom: 8px;
+}
+.benefits-text {
+  max-width: 264px;
 }
 /* #endregion */
 
@@ -131,15 +249,26 @@ a {
   text-transform: capitalize;
 }
 
-.team-card {
-  background-color: #fff;
+.team-cards-list {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
 }
 
-.team-subtitle {
+.team-cards-item {
+  max-width: 264px;
+  padding-bottom: 32px;
+  background-color: #fff;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.team-cards-subtitle {
+  margin: 32px 0 8px;
   text-align: center;
 }
 
-.team-text {
+.team-cards-text {
   text-align: center;
 }
 /* #endregion */
@@ -148,14 +277,35 @@ a {
 .portfolio-title {
   text-transform: capitalize;
 }
+
+.portfolio-cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+
+.portfolio-cards-item {
+  max-width: 360px;
+  padding-bottom: 32px;
+}
+.portfolio-subtitle {
+  margin-bottom: 8px;
+}
+
+.portfolio-cards-wrapper {
+  padding: 32px 16px;
+}
 /* #endregion */
 
 /* #region Footer */
 .footer {
+  padding: 100px 0;
   background-color: #2e2f42;
 }
 
 .footer-text {
+  max-width: 264px;
+  margin-top: 16px;
   color: #f4f4fd;
 }
 /* #endregion */
