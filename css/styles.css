@@ -1,0 +1,161 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #434455;
+  background-color: #fff;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #2e2f42;
+  letter-spacing: 0.02em;
+}
+
+/* #region Logo settings */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 117%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+}
+
+.header-logo-accent {
+  color: #2e2f42;
+}
+
+.footer-logo-accent {
+  color: #f4f4fd;
+}
+/* #endregion */
+
+/* #region Header */
+.address {
+  font-style: normal;
+}
+
+.header-nav,
+.header-address {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.header-nav {
+  font-weight: 500;
+  font-size: 16px;
+  color: #2e2f42;
+}
+
+.header-address {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+.header-nav:hover,
+.header-nav:focus,
+.header-address:hover,
+.header-address:focus {
+  color: #404bbf;
+}
+
+/* #endregion */
+
+/* #region Hero section */
+.hero-section {
+  background-color: #2e2f42;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 107%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+}
+
+.order-button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4d5ae5;
+  cursor: pointer;
+}
+
+.order-button:hover,
+.order-button:focus {
+  background-color: #404bbf;
+}
+/* #endregion */
+
+/* #region Benefits section */
+.benefits-subtitle {
+  letter-spacing: 0.02em;
+}
+/* #endregion */
+
+/* #region Team section */
+.team-section {
+  background-color: #f4f4fd;
+}
+
+.team-title {
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.team-card {
+  background-color: #fff;
+}
+
+.team-subtitle {
+  text-align: center;
+}
+
+.team-text {
+  text-align: center;
+}
+/* #endregion */
+
+/* #region Potfolio section */
+.portfolio-title {
+  text-transform: capitalize;
+}
+/* #endregion */
+
+/* #region Footer */
+.footer {
+  background-color: #2e2f42;
+}
+
+.footer-text {
+  color: #f4f4fd;
+}
+/* #endregion */
